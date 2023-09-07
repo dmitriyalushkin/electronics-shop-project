@@ -12,7 +12,7 @@ if __name__ == '__main__':
     # применяем скидку
     item1.apply_discount()
 
-    print(item1.price)  # 8000.0
+    print(item1.price * Item.pay_rate)  # 8000.0
     print(item2.price)  # 20000
 
     print(f'{item1}, {item2}')  # [<__main__.Item object at 0x000001EC6250C690>, <__main__.Item object at 0x000001EC6250C6D0>]

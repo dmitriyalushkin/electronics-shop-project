@@ -32,13 +32,3 @@ class Item:
         return float(self.price * Item.pay_rate)
 
 
-    def item_add_all(self):
-        item1 = Item("Смартфон", 10000, 20)
-        item2 = Item("Ноутбук", 20000, 5)
-        all.append(item1)
-        all.append(item2)
-        return Item.all
-
-if __name__ == '__main__':
-    item1 = Item("Смартфон", 10000, 20)
-    item2 = Item("Ноутбук", 20000, 5)
