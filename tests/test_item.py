@@ -29,3 +29,14 @@ def test_calculate_total_price(item1, item2):
     assert item2.calculate_total_price() == 100000
 
 
+def test_name(item1):
+    assert item1.name == 'Смартфон'
+
+
+def test_string_to_number(item1):
+    assert item1.string_to_number('5') == 5
+    assert item1.string_to_number('5.0') == 5
+    assert item1.string_to_number('5.5') == 5
+
+
+
