@@ -39,4 +39,9 @@ def test_string_to_number(item1):
     assert item1.string_to_number('5.5') == 5
 
 
+def test_repr(item1):
+    assert repr(item1) == 'Item("Смартфон", 10000, 20)'
 
+
+def test_str(item1):
+    assert str(item1) == "Смартфон"
