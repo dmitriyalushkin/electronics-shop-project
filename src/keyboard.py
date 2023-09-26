@@ -9,9 +9,6 @@ class MixinLanguage:
     def language(self):
         return self.__language
 
-    @language.setter
-    def language(self, value):
-        self.__language = value
 
     def change_lang(self):
         if self.__language == "EN":
