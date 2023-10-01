@@ -57,14 +57,14 @@ class Item:
         try:
             with open(filename, encoding='windows-1251') as csvfile:
                 reader = csv.DictReader(csvfile)
-            for row in reader:
-                __name = str(row['name'])
-                price = cls.string_to_number(row['price'])
-                quantity = cls.string_to_number(row['quantity'])
-                if row['name'] or row['price'] or row['quantity'] is None:
-                    raise InstantiateCSVError
-                item = cls(__name, price, quantity)
-                print(item)
+                for row in reader:
+                    __name = str(row['name'])
+                    price = cls.string_to_number(row['price'])
+                    quantity = cls.string_to_number(row['quantity'])
+                    if row['name'] or row['price'] or row['quantity'] is None:
+                        raise InstantiateCSVError
+                    item = cls(__name, price, quantity)
+                    print(item)
         except FileNotFoundError:
             raise FileNotFoundError("Отсутствует файл item.csv")
 
